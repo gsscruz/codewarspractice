@@ -6,4 +6,4 @@
 // solution([]); // should return []
 
 export const solution = (nums: number[]): number[] =>
-  nums.length > 0 ? nums.sort((a, b) => a - b) : [];
+  nums.length > 0 ? [...nums].sort((a, b) => a - b) : [];
