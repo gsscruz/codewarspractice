@@ -7,8 +7,6 @@
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 export function accum(s: string) {
-  const splitString = [...s];
-
   const multiplyAndTransformLetter = (char: string, multiplier: number) => {
     let letters: string = "";
     for (let i = 0; i <= multiplier; i++) {
