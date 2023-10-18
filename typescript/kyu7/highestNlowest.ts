@@ -12,15 +12,10 @@ export class Kata {
   static highAndLow(numbers: string): string {
     const parsedInput = numbers
       .split(" ")
-      .map((charString) => Number(charString));
+      .map((charString) => Number(charString))
+      .sort((a, b) => a - b);
 
-    function getHighestAndLowestValue(numberArray: number[]): string {
-      const sortedNumbers = numberArray.sort((a, b) => a - b);
-      const higestVal = [...sortedNumbers].pop();
-      const lowestVal = [...sortedNumbers].shift();
-      return `${higestVal} ${lowestVal}`;
-    }
-    return getHighestAndLowestValue(parsedInput);
+    return `${parsedInput[parsedInput.length - 1]} ${parsedInput[0]}`;
   }
 }
 
